@@ -18,4 +18,9 @@ namespace CSharpLearning
         public int Y { get; set; }
 
     }
+
+    public class Animal
+    {
+
+    }
 }
