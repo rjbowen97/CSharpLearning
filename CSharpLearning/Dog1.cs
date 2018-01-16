@@ -10,20 +10,32 @@ namespace CSharpLearning
         //Properties hold values
         public string Name { get; set; }
 
-        //The above is really the same as below
+        //^^^^ The same thing vvvv
 
-        private string MyName;
-
+        private string _name;
         public string MyProperty
         {
-            get { return MyName; }
-            set { MyName = value; }
+            get { return _name; }
+            private set
+            {
+                _name = value;
+            }
+        }
+
+        public void Speak(string what = "bark")
+        {
+            // TODO
+        }
+
+        public void Speak(int times, string what = "bark", bool sit = true)
+        {
+            // TODO
         }
 
 
         //Only by the class
         private void Foo() { }
-        
+
         //Only by this and derived classes
         //protected void Bar() { }
 
@@ -33,5 +45,9 @@ namespace CSharpLearning
 
     class Poodle : Dog
     {
+        void x()
+        {
+            Speak(2, sit: true);
+        }
     }
 }
