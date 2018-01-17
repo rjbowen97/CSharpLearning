@@ -24,7 +24,8 @@ namespace CSharpLearning
 
         public void Speak(string what = "bark")
         {
-            // TODO
+            if (HasSpoken != null)
+                HasSpoken(this, EventArgs.Empty);
         }
 
         public void Speak(int times, string what = "bark", bool sit = true)
@@ -32,6 +33,7 @@ namespace CSharpLearning
             // TODO
         }
 
+        public event EventHandler HasSpoken;
 
         //Only by the class
         private void Foo() { }
