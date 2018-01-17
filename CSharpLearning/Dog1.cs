@@ -4,6 +4,21 @@ using System.Text;
 
 namespace CSharpLearning
 {
+
+    public class Trainer
+    {
+        void Operate()
+        {
+            var dog = new Poodle();
+            dog.HasSpoken += Dog_HasSpoken;
+        }
+
+        private void Dog_HasSpoken(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     //Partial spreads the class out across Dog1 and Dog2
     public partial class Dog
     {
